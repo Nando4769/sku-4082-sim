@@ -6,7 +6,7 @@
 This simple excel model simulates a weekly-reviewed **(s, Q) inventory replenishment policy** for `SKU-4082` across 40 operating weeks, alongside a disruption calculator that evaluates whether to pay for expedited freight when an inbound shipment is delayed.
 
 ## Key Results
-* **Replenishment Policy:** Order **360 units (15 full pallets)** whenever **Inventory Position** (On-Hand + In-Transit Orders) drops to or below **359 units** (`ROP = 344`, including **67 units of Safety Stock** for a 95% service level).
+* **Replenishment Policy:** Order **360 units (15 full pallets)** whenever **Inventory Position** (On-Hand + In-Transit Orders) drops to or below **344 units** (`ROP = 344`, including **67 units of Safety Stock** for a 95% service level).
 * **Pallet Optimization:** Rounding theoretical EOQ (`358.43 units`) up to `360 units` (`24 units/pallet`) adds only **$0.06/year** in cycle cost while eliminating partial-pallet breakdown labor at receiving.
 * **40-Week Backtest:** Achieved a **100% fill rate** with zero stockouts, absorbing a Week 14 demand spike (`192 units`) down to **43 units** on hand.
 * **Expedite Trade-Off (Week 31 Delay):** A 1-week delivery delay exposes the warehouse to **26 lost units** (`$1,170` in lost gross margin at `$45/unit`). Paying a **$450 flat expedite fee** saves **$720 in net profit** (**1.6x net ROI**; breakeven = **10 units**).
